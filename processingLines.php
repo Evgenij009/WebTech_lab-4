@@ -10,9 +10,19 @@ function handlingString($str)
         $arrayLines[$i] = trimSpace($arrayLines[$i]);
     }
 
-    print_r($arrayLines);
+    foreach ($arrayLines as $line) {
+        echo "|           ";
+        for ($i = 0; $i < strlen($line); ++$i) {
+            if (is_numeric($line[$i])) {
+                echo "<span style=\"color: blue\">$line[$i]</span>";
+            } else {
+                echo $line[$i];
+            }
+        }
+        echo "<br>";
+    }
 
-    return $resultStr;
+    //print_r($arrayLines);
 }
 
 function trimSpace($line)

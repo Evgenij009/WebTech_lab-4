@@ -44,13 +44,16 @@ define("TEXT_EXTENSIONS", array('txt', 'tex', 'bat'));
                 }
                 echo $str;
                 fclose($created_file);
-                //echo "</textarea>";
-                $strResult = handlingString($str);
-                //echo " <textarea class=\"textarea__result\"> $strResult </textarea>";
+                echo "</textarea>";
+
+                echo " <div class=\"text__result\">";
+                handlingString($str);
+                echo "</div>";
             }
         }
 
         ?>
+
 
     </div>
 
