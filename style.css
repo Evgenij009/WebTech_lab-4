@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    border: 2px rgb(255, 0, 255) solid;
+    padding: 20px 40px;
+    background-color: turquoise;
+    border-radius: 20%;
+    margin: 20px 20px;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: rgb(22, 245, 22);
+}
+
+.textarea__source {
+    border: 2px rgb(40, 85, 248) solid;
+    width: 700px;
+    height: 500px;
+    margin-left: 20px;
+}
+
+.textarea__result {
+    border: 2px rgb(40, 85, 248) solid;
+    width: 700px;
+    height: 500px;
+    margin-right: 20px;
+}
