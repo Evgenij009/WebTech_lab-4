@@ -18,20 +18,31 @@ button {
     font-size: 30px;
 }
 
+h2 {
+    margin-left: 20px;
+}
+
+p {
+    /* margin-left: 20px; */
+    font-size: 15px;
+}
+
 button:hover {
     background-color: rgb(22, 245, 22);
 }
 
 .textarea__source {
     border: 2px rgb(40, 85, 248) solid;
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    min-height: 200px;
     margin-left: 20px;
+    font-size: 20px;
 }
 
-.textarea__result {
+.text__result {
     border: 2px rgb(40, 85, 248) solid;
-    width: 700px;
-    height: 500px;
-    margin-right: 20px;
+    width: 600px;
+    height: auto;
+    margin-left: 20px;
+    font-size: 20px;
 }

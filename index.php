@@ -36,19 +36,22 @@ define("TEXT_EXTENSIONS", array('txt', 'tex', 'bat'));
                 $extension = strtolower(end($file_path_data));
                 $path = "files/" . $_FILES['file']['name'];
                 copy($_FILES['file']['tmp_name'], $path);
-                $created_file = fopen($path, "r");
-                echo "<textarea name='source' class=\"textarea__source\">";
-                $str = "";
-                while (!feof($created_file)) {
-                    $str .= htmlentities(fgets($created_file));
+                if (($created_file = fopen($path, "r")) !== null) {
+                    echo "<textarea name='source' class=\"textarea__source\">";
+                    $str = "";
+                    while (!feof($created_file)) {
+                        $str .= htmlentities(fgets($created_file));
+                    }
+                    echo $str;
+                    fclose($created_file);
+                    echo "</textarea>";
+                    echo "<h2>Result:</h2>";
+                    echo " <div class=\"text__result\">";
+                    handlingString($str);
+                    echo "</div>";
+                } else {
+                    echo "<h2 style=\"color:red\">Error open file!</h2>";
                 }
-                echo $str;
-                fclose($created_file);
-                echo "</textarea>";
-
-                echo " <div class=\"text__result\">";
-                handlingString($str);
-                echo "</div>";
             }
         }
 
